@@ -14,5 +14,4 @@ This repository is organized by **event_name** followed by:
 -   Outputs
 -   Scripts
 
-For more information on future events, please visit our [website](https://www.csun.edu/civil-discourse-social-change).
-And follow our [Instagram page](https://www.instagram.com/cdsc_csun/)
+For more information on future events, please visit our [website](https://www.csun.edu/civil-discourse-social-change) and follow our [Instagram page](https://www.instagram.com/cdsc_csun/)
