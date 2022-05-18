@@ -54,6 +54,8 @@ learning_data <- data %>%
 
 
 #### plotting data ####
+colorpal <- c("#FBB574", "#E88D72", "#543855", "#FF8882", "#F0A160", "#3F612D", "#8FE388")
+
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
@@ -68,7 +70,7 @@ advertisement_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "vulnerable_communities", "advertisement.png"), width = 8, height = 5)
 
@@ -86,7 +88,7 @@ overall_rate %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "vulnerable_communities", "event_rating.png"), width = 6, height = 5)
 
@@ -104,7 +106,7 @@ speaker_rate %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "vulnerable_communities", "speaker_rating.png"), width = 6, height = 5)
 
@@ -123,7 +125,7 @@ timing_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = c("#E88D72", "#543855")) +
   guides(fill = FALSE)
 ggsave(here("Output", "vulnerable_communities", "convenience_of_event.png"), width = 6, height = 5)
 
@@ -142,6 +144,6 @@ learning_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "vulnerable_communities", "audience_learning.png"), width = 6, height = 5)
