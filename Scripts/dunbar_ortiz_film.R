@@ -59,6 +59,8 @@ learning_data <- data %>%
 learning_data
 
 #### plot 
+colorpal <- c("#8CB369", "#F4E285", "#F4A259", "#5B8E7D", "#BC4B51", "#8D898C")
+
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
@@ -73,7 +75,7 @@ advertisement_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "advertisement.png"), width = 8, height = 5)
 
@@ -91,7 +93,7 @@ event_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "event_rating.png"), width = 6, height = 5)
 
@@ -109,7 +111,7 @@ speaker_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "speaker_rating.png"), width = 6, height = 5)
 
@@ -127,7 +129,7 @@ timing_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "convenience_of_event.png"), width = 6, height = 5)
 
@@ -145,6 +147,6 @@ learning_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = c("#5B8E7D", "#BC4B51")) +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "audience_learning.png"), width = 6, height = 5)
