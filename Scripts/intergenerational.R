@@ -54,6 +54,7 @@ audience_data <- data %>%
 
 
 #### plot ####
+colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
@@ -64,12 +65,11 @@ advertisement_data %>%
                                   size = 10,
                                   face = "bold"),
         axis.title = element_text(face = "bold"),
-        axis.text.x = element_text(color = "#000000",
-                                   angle = 90),
+        axis.text.x = element_text(color = "#000000"),
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "intergenerational", "advertisement.png"), width = 8, height = 5)
 
@@ -88,7 +88,7 @@ overall_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = c("#348AA7", "#9091AA")) +
   guides(fill = FALSE)
 ggsave(here("Output", "intergenerational", "event_rating.png"), width = 6, height = 5)
 
@@ -106,7 +106,7 @@ speaker_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = c("#348AA7", "#9091AA")) +
   guides(fill = FALSE)
 ggsave(here("Output", "intergenerational", "speaker_rating.png"), width = 6, height = 5)
 
@@ -124,11 +124,11 @@ event_timing %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "intergenerational", "convenience_of_event.png"), width = 6, height = 5)
 
-learning_data %>%
+audience_data %>%
   ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
   geom_col() +
   labs(title = "Did the respondents learn from the event?",
@@ -142,6 +142,6 @@ learning_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_viridis_d() +
+  scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
 ggsave(here("Output", "intergenerational", "audience_learning.png"), width = 6, height = 5)
