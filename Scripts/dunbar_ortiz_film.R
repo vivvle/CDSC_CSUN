@@ -46,17 +46,17 @@ event_rating <- data %>%
   count(event_rating)
 event_rating
 
-
 speaker_rating <- data %>%
   count(speaker_rating)
 speaker_rating
 
 timing_data <- data %>%
   count(event_timing)
+timing_data
 
 learning_data <- data %>%
   count(audience_learning)
-
+learning_data
 
 #### plot 
 advertisement_data %>%
