@@ -130,3 +130,21 @@ timing_data %>%
   scale_fill_viridis_d() +
   guides(fill = FALSE)
 ggsave(here("Output", "dunbar_ortiz_film", "convenience_of_event.png"), width = 6, height = 5)
+
+learning_data %>%
+  ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
+  geom_col() +
+  labs(title = "Did the respondents learn from the event?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_viridis_d() +
+  guides(fill = FALSE)
+ggsave(here("Output", "dunbar_ortiz_film", "audience_learning.png"), width = 6, height = 5)
