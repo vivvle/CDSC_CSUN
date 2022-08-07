@@ -77,7 +77,7 @@ advertisement_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "dunbar_ortiz_film", "advertisement.png"), width = 8, height = 5)
+ggsave(here("Output","2021-2022", "dunbar_ortiz_film", "advertisement.png"), width = 8, height = 5)
 
 event_rating %>%
   ggplot(aes(x = reorder(event_rating, -n), y = n, fill = event_rating)) +
@@ -95,7 +95,7 @@ event_rating %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "dunbar_ortiz_film", "event_rating.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "dunbar_ortiz_film", "event_rating.png"), width = 6, height = 5)
 
 speaker_rating %>%
   ggplot(aes(x = reorder(speaker_rating, -n), y = n, fill = speaker_rating)) +
@@ -113,7 +113,7 @@ speaker_rating %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "dunbar_ortiz_film", "speaker_rating.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "dunbar_ortiz_film", "speaker_rating.png"), width = 6, height = 5)
 
 timing_data %>%
   ggplot(aes(x = reorder(event_timing, -n), y = n, fill = event_timing)) +
@@ -131,7 +131,7 @@ timing_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "dunbar_ortiz_film", "convenience_of_event.png"), width = 6, height = 5)
+ggsave(here("Output","2021-2022", "dunbar_ortiz_film", "convenience_of_event.png"), width = 6, height = 5)
 
 learning_data %>%
   ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
@@ -149,4 +149,4 @@ learning_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = c("#5B8E7D", "#BC4B51")) +
   guides(fill = FALSE)
-ggsave(here("Output", "dunbar_ortiz_film", "audience_learning.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "dunbar_ortiz_film", "audience_learning.png"), width = 6, height = 5)
