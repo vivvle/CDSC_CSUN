@@ -1,6 +1,6 @@
 #### Webinar with Roxanne Dunbar-Ortiz ####
 #### Created by: Vivian Vy Le ####
-#### Updated on: 2022-05-17 ####
+#### Updated on: 2022-08-07 ####
 
 #### Load library ####
 library(tidyverse)
@@ -59,7 +59,7 @@ learning_data <- data %>%
 learning_data
 
 #### plot 
-colorpal <- c("#8CB369", "#F4E285", "#F4A259", "#5B8E7D", "#BC4B51", "#8D898C")
+colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
