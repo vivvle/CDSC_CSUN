@@ -1,6 +1,6 @@
-#### COVID-19 and Vulerable Communities ####
+#### COVID-19 and Vulnerable Communities ####
 #### Created by: Vivian Vy Le ####
-#### Updated on: 2022-05-17 ####
+#### Updated on: 2022-08-07 ####
 
 #### Load library ####
 library(tidyverse)
@@ -54,7 +54,7 @@ learning_data <- data %>%
 
 
 #### plotting data ####
-colorpal <- c("#FBB574", "#E88D72", "#543855", "#FF8882", "#F0A160", "#3F612D", "#8FE388")
+colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
