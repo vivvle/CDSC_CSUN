@@ -55,6 +55,7 @@ audience_data <- data %>%
 
 #### plot ####
 colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
+
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
@@ -71,7 +72,7 @@ advertisement_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "intergenerational", "advertisement.png"), width = 8, height = 5)
+ggsave(here("Output", "2021-2022", "intergenerational", "advertisement.png"), width = 8, height = 5)
 
 
 overall_rating %>%
@@ -90,7 +91,7 @@ overall_rating %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = c("#348AA7", "#9091AA")) +
   guides(fill = FALSE)
-ggsave(here("Output", "intergenerational", "event_rating.png"), width = 6, height = 5)
+ggsave(here("Output","2021-2022", "intergenerational", "event_rating.png"), width = 6, height = 5)
 
 speaker_rating %>%
   ggplot(aes(x = reorder(speaker_rating, -n), y = n, fill = speaker_rating)) +
@@ -108,7 +109,7 @@ speaker_rating %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = c("#348AA7", "#9091AA")) +
   guides(fill = FALSE)
-ggsave(here("Output", "intergenerational", "speaker_rating.png"), width = 6, height = 5)
+ggsave(here("Output","2021-2022", "intergenerational", "speaker_rating.png"), width = 6, height = 5)
 
 event_timing %>%
   ggplot(aes(x = reorder(event_timing, -n), y = n, fill = event_timing)) +
@@ -126,7 +127,7 @@ event_timing %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "intergenerational", "convenience_of_event.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "intergenerational", "convenience_of_event.png"), width = 6, height = 5)
 
 audience_data %>%
   ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
@@ -144,4 +145,4 @@ audience_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "intergenerational", "audience_learning.png"), width = 6, height = 5)
+ggsave(here("Output","2021-2022", "intergenerational", "audience_learning.png"), width = 6, height = 5)
