@@ -72,7 +72,7 @@ advertisement_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "vulnerable_communities", "advertisement.png"), width = 8, height = 5)
+ggsave(here("Output", "2021-2022", "vulnerable_communities", "advertisement.png"), width = 8, height = 5)
 
 overall_rate %>%
   ggplot(aes(x = reorder(overall_rating, -n), y = n, fill = overall_rating)) +
@@ -90,7 +90,7 @@ overall_rate %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "vulnerable_communities", "event_rating.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "vulnerable_communities", "event_rating.png"), width = 6, height = 5)
 
 speaker_rate %>%
   ggplot(aes(x = reorder(speaker_rating, -n), y = n, fill = speaker_rating)) +
@@ -108,7 +108,7 @@ speaker_rate %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "vulnerable_communities", "speaker_rating.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "vulnerable_communities", "speaker_rating.png"), width = 6, height = 5)
 
 
 timing_data %>%
@@ -127,7 +127,7 @@ timing_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = c("#E88D72", "#543855")) +
   guides(fill = FALSE)
-ggsave(here("Output", "vulnerable_communities", "convenience_of_event.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "vulnerable_communities", "convenience_of_event.png"), width = 6, height = 5)
 
 
 learning_data %>%
@@ -146,4 +146,4 @@ learning_data %>%
         panel.grid.minor = element_blank()) +
   scale_fill_manual(values = colorpal) +
   guides(fill = FALSE)
-ggsave(here("Output", "vulnerable_communities", "audience_learning.png"), width = 6, height = 5)
+ggsave(here("Output", "2021-2022", "vulnerable_communities", "audience_learning.png"), width = 6, height = 5)
