@@ -54,12 +54,12 @@ audience_data <- data %>%
 
 
 #### plot ####
-colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
+colorpal<- c("#F2D0A4", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
-  labs(title = "How did respondants learn from the webinar on transforming justice?",
+  labs(title = "How did respondants learn about the webinar on transforming justice?",
        x = "Responses",
        y = "Counts") +
   theme(plot.title = element_text(hjust = 0.5,
@@ -88,7 +88,7 @@ event_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#525174", "#513B56", "#595A9F")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "transforming_justice", "event_rating.png"), width = 6, height = 5)
 
@@ -106,7 +106,7 @@ speaker_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "transforming_justice", "speaker_rating.png"), width = 6, height = 5)
 
@@ -124,7 +124,7 @@ event_timing %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "transforming_justice", "convenience_of_event.png"), width = 6, height = 5)
 
@@ -142,7 +142,7 @@ audience_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "transforming_justice", "audience_learning.png"), width = 6, height = 5)
 
