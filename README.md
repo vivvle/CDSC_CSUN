@@ -4,11 +4,11 @@
 
 ![CDSC Logo](https://github.com/vivvle/CDSC_CSUN/blob/main/Main%20Logo%207_med.png)
 
-Civil Discourse and Social Change (CDSC)  is a campus-wide initiative that combines education, community involvement and sustained activism on issues around social justice and social change.
+Civil Discourse and Social Change (CDSC)  is a campus-wide initiative that combines education, community involvement and sustained activism on issues around social justice and social change. 
 
 As we organize and plan events, we like to hear about the experience from our attendees. The information is collected from post-event surveys created on Google Forms.
 
-This repository is organized by **event_name** followed by:
+This repository is organized by **school_year**, then **event_name**. The following is the current format of the repository:
 
 -   Data (data comes from post-event surveys)
 -   Outputs
