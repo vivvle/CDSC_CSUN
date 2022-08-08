@@ -112,7 +112,7 @@ speaker_rating %>%
 ggsave(here("Output","2021-2022", "intergenerational", "speaker_rating.png"), width = 6, height = 5)
 
 event_timing %>%
-  ggplot(aes(x = reorder(event_timing, -n), y = n, fill = event_timing)) +
+  ggplot(aes(x = reorder(event_timing, n), y = n, fill = event_timing)) +
   geom_col() +
   labs(title = "How convenient was the event for the respondents?",
        x = "Responses",
