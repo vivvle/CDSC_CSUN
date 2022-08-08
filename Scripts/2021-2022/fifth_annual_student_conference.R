@@ -58,7 +58,7 @@ audience_data <- data %>%
 
 
 #### Plot ####
-colorpal<- c("#B5BFA1", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA", "#6E9887")
+colorpal<- c("#F2D0A4", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
@@ -93,7 +93,7 @@ event_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = c("#595A9F", "#9091AA")) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "event_rating.png"), width = 6, height = 5)
 
@@ -112,6 +112,42 @@ speaker_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = c("#595A9F", "#9091AA")) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "speaker_rating.png"), width = 6, height = 5)
+
+event_timing %>%
+  ggplot(aes(x = reorder(event_timing, -n), y = n, fill = event_timing)) +
+  geom_col() +
+  labs(title = "How convenient was the event for the respondents?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = c("#525174", "#595A9F")) +
+  guides(fill = FALSE)
+ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "event_timing.png"), width = 6, height = 5)
+
+audience_data %>%
+  ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
+  geom_col() +
+  labs(title = "Did the respondents learn from the event?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
+  guides(fill = FALSE)
+ggsave(here("Output" , "2021-2022", "fifth_annual_student_conference", "audience_learning.png"), width = 6, height = 5)
