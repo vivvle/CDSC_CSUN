@@ -151,3 +151,23 @@ audience_data %>%
   scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output" , "2021-2022", "fifth_annual_student_conference", "audience_learning.png"), width = 6, height = 5)
+
+
+panel_data %>%
+  ggplot(aes(x = reorder(panel_attendence, n), y = n, fill = panel_attendence)) +
+  geom_col() +
+  labs(title = "Which panels did the participants attend?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = colorpal) +
+  coord_flip() +
+  guides(fill = FALSE)
+ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "panel_attendence.png"), width = 8, height = 5)
