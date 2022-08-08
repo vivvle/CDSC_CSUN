@@ -54,12 +54,12 @@ audience_data <- data %>%
 
 
 #### plot ####
-colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
+colorpal<- c("#F2D0A4", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
-  labs(title = "How did respondants learn from the webinar on intergenerational conversation on activism?",
+  labs(title = "How did respondants learn about the webinar on intergenerational conversation on activism?",
        x = "Responses",
        y = "Counts") +
   theme(plot.title = element_text(hjust = 0.5,
@@ -89,7 +89,7 @@ overall_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = c("#348AA7", "#9091AA")) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output","2021-2022", "intergenerational", "event_rating.png"), width = 6, height = 5)
 
@@ -107,7 +107,7 @@ speaker_rating %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = c("#348AA7", "#9091AA")) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output","2021-2022", "intergenerational", "speaker_rating.png"), width = 6, height = 5)
 
@@ -125,7 +125,7 @@ event_timing %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "intergenerational", "convenience_of_event.png"), width = 6, height = 5)
 
@@ -143,6 +143,6 @@ audience_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output","2021-2022", "intergenerational", "audience_learning.png"), width = 6, height = 5)
