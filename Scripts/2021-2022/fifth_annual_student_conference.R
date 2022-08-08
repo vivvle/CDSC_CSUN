@@ -58,7 +58,7 @@ audience_data <- data %>%
 
 
 #### Plot ####
-colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA", "#6E9887")
+colorpal<- c("#B5BFA1", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA", "#6E9887")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
@@ -96,3 +96,22 @@ event_rating %>%
   scale_fill_manual(values = c("#595A9F", "#9091AA")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "event_rating.png"), width = 6, height = 5)
+
+
+speaker_rating %>%
+  ggplot(aes(x = reorder(speaker_rating, -n), y = n, fill = speaker_rating)) +
+  geom_col() +
+  labs(title = "How did respondants rate the speakers?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = c("#595A9F", "#9091AA")) +
+  guides(fill = FALSE)
+ggsave(here("Output", "2021-2022", "fifth_annual_student_conference", "speaker_rating.png"), width = 6, height = 5)
