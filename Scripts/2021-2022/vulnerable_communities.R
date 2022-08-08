@@ -54,12 +54,12 @@ learning_data <- data %>%
 
 
 #### plotting data ####
-colorpal<- c("#BCE784", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
+colorpal<- c("#F2D0A4", "#5DD39E", "#348AA7", "#525174", "#513B56", "#595A9F", "#9091AA")
 
 advertisement_data %>%
   ggplot(aes(x = reorder(advertisement_choices, -n), y = n, fill = advertisement_choices)) +
   geom_col() +
-  labs(title = "How did respondants learn from the CDSC COVID-19 and Vulnerable Communities Webinar?",
+  labs(title = "How did respondants learn about the CDSC COVID-19 and Vulnerable Communities Webinar?",
       x = "Responses",
       y = "Counts") +
   theme(plot.title = element_text(hjust = 0.5,
@@ -88,7 +88,7 @@ overall_rate %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "vulnerable_communities", "event_rating.png"), width = 6, height = 5)
 
@@ -106,7 +106,7 @@ speaker_rate %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "vulnerable_communities", "speaker_rating.png"), width = 6, height = 5)
 
@@ -125,7 +125,7 @@ timing_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = c("#E88D72", "#543855")) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "vulnerable_communities", "convenience_of_event.png"), width = 6, height = 5)
 
@@ -144,6 +144,6 @@ learning_data %>%
         axis.text.y = element_text(color = "#000000"),
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
-  scale_fill_manual(values = colorpal) +
+  scale_fill_manual(values = c("#595A9F", "#525174", "#513B56")) +
   guides(fill = FALSE)
 ggsave(here("Output", "2021-2022", "vulnerable_communities", "audience_learning.png"), width = 6, height = 5)
