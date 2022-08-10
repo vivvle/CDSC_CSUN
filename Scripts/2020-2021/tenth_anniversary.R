@@ -1,6 +1,6 @@
 #### 2020 Election Webinar ####
 #### Created by: Vivian Vy Le ####
-#### Updated on: 2022-08-08 ####
+#### Updated on: 2022-08-09 ####
 
 #### Load library ####
 library(tidyverse)
