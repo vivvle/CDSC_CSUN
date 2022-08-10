@@ -1,4 +1,4 @@
-participants,"Overall, how would you rate the event?",How would you rate the speakers?,How did you learn about the event? (Please check all that apply),Are you attending this event for a class?,"If you are attending with a class, please state which class you are coming from. (Name of class and professor)",How convenient was the timing of the event?,Did you learn from the event? From the speakers?,Any other suggestions or comments to help us improve for future events?,Would you like to be added to our mailing list to be informed of any future CDSC events?
+participants,event_rating,speaker_rating,advertisement,class_attendence,class_and_prof,event_timing,audience_learning,comments,mailing_list
 1,Excellent,Excellent,Professor,Yes,"UCLA ASIA AM 10 W, Dr. Kelly Fong",Extremely convenient,Very much,,No
 2,Excellent,Excellent,Professor,Yes,"AAS 350, Kristina Garcia",Somewhat convenient,Somewhat,,No
 3,Fairly Good,Excellent,Email,No,,Somewhat convenient,Very much,"I wish I had heard of this event sooner. I asked my class to attend this webinar very last minute in lieu of attending our Zoom class this morning, which is also at 11am. ",Yes
