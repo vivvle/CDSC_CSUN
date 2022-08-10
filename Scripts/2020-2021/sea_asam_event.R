@@ -114,3 +114,38 @@ speaker_data %>%
   guides(fill = FALSE)
 ggsave(here("Output", "2020-2021", "sea_asam_event", "speaker_rating.png"), width = 6, height = 5)
 
+timing_data %>%
+  ggplot(aes(x = reorder(event_timing, -n), y = n, fill = event_timing)) +
+  geom_col() +
+  labs(title = "How convenient was the event for the respondents?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = colorgrad) +
+  guides(fill = FALSE)
+ggsave(here("Output", "2020-2021", "sea_asam_event", "event_timing.png"), width = 6, height = 5)
+
+audience_data %>%
+  ggplot(aes(x = reorder(audience_learning, -n), y = n, fill = audience_learning)) +
+  geom_col() +
+  labs(title = "Did the respondents learn from the event?",
+       x = "Responses",
+       y = "Counts") +
+  theme(plot.title = element_text(hjust = 0.5,
+                                  size = 10,
+                                  face = "bold"),
+        axis.title = element_text(face = "bold"),
+        axis.text.x = element_text(color = "#000000"),
+        axis.text.y = element_text(color = "#000000"),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  scale_fill_manual(values = colorgrad) +
+  guides(fill = FALSE)
+ggsave(here("Output", "2020-2021", "sea_asam_event", "audience_learning.png"), width = 6, height = 5)
